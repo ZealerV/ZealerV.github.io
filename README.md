@@ -1,51 +1,103 @@
-# Jekyll Theme - Mundana by WowThemes.net
+# 🏆 – A Blog Theme for Jekyll
+Trophy is a blog theme for Jekyll built using HTML, Sass, and JavaScript (no jQuery). External stylesheets and libraries included are Google Fonts, Font Awesome, Normalize.CSS, Rellax, and WOW.js.
+Trophy is also available in [Ghost](https://github.com/thomasvaeth/trophy-ghost).
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[Download](https://github.com/wowthemesnet/mundana-theme-jekyll/archive/master.zip) &nbsp; | &nbsp; 
-[Buy me a coffe](https://www.wowthemes.net/donate/) &nbsp; | &nbsp; [Documentation](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/) &nbsp; | &nbsp; 
-[WordPress version](https://www.wowthemes.net/themes/mundana-wordpress/) 
+## Screenshots
+Blog Page (Posts)
+![Blog Page](https://github.com/thomasvaeth/trophy-jekyll/blob/master/_screenshots/screenshot-1.png "Desktop screenshot")
 
-![mundana jekyll theme screenshot](assets/images/screenshot.jpg)
+Blog Page (Categories)
+![Blog Page](https://github.com/thomasvaeth/trophy-jekyll/blob/master/_screenshots/screenshot-2.png "Desktop screenshot")
 
-### Documentation
+Post Page (Mast)
+![Post Page](https://github.com/thomasvaeth/trophy-jekyll/blob/master/_screenshots/screenshot-3.png "Desktop screenshot")
 
-[How to install & use](https://bootstrapstarter.com/bootstrap-templates/mundana-theme-jekyll/)
+Post Page (Profile & Footer)
+![Post Page](https://github.com/thomasvaeth/trophy-jekyll/blob/master/_screenshots/screenshot-4.png "Desktop screenshot")
 
-### Contribute to Mundana repository
+Archive Page
+![Archive Page](https://github.com/thomasvaeth/trophy-jekyll/blob/master/_screenshots/screenshot-5.png "Desktop screenshot")
 
-1. In the top-right corner of this page, click **Fork**.
+## Installation
+All dependencies are saved in the ````Gemfile````. Run ````bundle install```` (Install [Bundler](http://bundler.io/) if it is not already) after cloning the repo.
 
-2. Clone a copy of your fork on your local, replacing *YOUR-USERNAME* with your Github username.
+## Edit Theme
+I made everything as easy as possible to edit. Most things can be found in the ````_config.yml````, but if more editing is required digging through the code will be required. The ````head.html```` file is in the ````_includes```` folder and the Sass variables are found in the ````_base.scss```` file in the ````_sass```` folder.
 
-   `git clone https://github.com/YOUR-USERNAME/mundana-theme-jekyll.git`
+### _config.yml
 
-3. **Create a branch**: 
+#### Site Settings
+    email: 
+    baseurl: ""
+    paginate: 5
+    paginate_path: "/blog/page-:num"
+    google_analytics: UA—XXXXXXXX-X
 
-   `git checkout -b <my-new-feature-or-fix>`
+* ````email```` - Your email for the contact card and the footer
+* ````baseurl```` - Path of blog if adding this on to another website
+* ````paginate```` - Number of blog posts per page
+* ````paginate_path```` - URL structure of paginated pages
+* ````google_analytics```` - Option field to replace with correct Google Analytics code
 
-4. **Make necessary changes and commit those changes**:
+#### SEO Settings
+    title: 
+    description: 
+    url: ""
+    twitter_username: 
+    default_img: 
 
-   `git add .`
+* ````title```` - Title of blog
+* ````description```` - Description of blog (recommended to not go over 160 characters)
+* ````url```` - URL of main website
+* ````twitter_username```` - Twitter username
+* ````default_img```` - Image that will appear when posting links on social networks
 
-   `git commit -m "new feature or fix"`
+#### Profile Settings
+    name: 
+    profile_img: 
+    profile: 
+    social:
+      github: 
 
-5. **Push changes**, replacing `<add-your-branch-name>` with the name of the branch you created earlier at step #3. :
-
-   `git push origin <add-your-branch-name>`
-
-6. Submit your changes for review. Go to your repository on GitHub, you'll see a **Compare & pull request** button. Click on that button. Now submit the pull request.
-
-That's it! Soon I'll be merging your changes into the master branch of this project. You will get a notification email once the changes have been merged. Thank you for your contribution.
+* ````name```` - Full name for SEO purposes
+* ````profile_img```` - Image for the profile card (size to 2000x1200px)
+* ````profile```` - Short description that will be in the profile card
+* ````social```` - List of social networks for icons in the contact card and the footer ([Font Awesome](http://fontawesome.io/) is used, so only match the name of the icon, but do not include ````fa-````)
 
 
-### Copyright
+#### Build Settings
+    exclude: ["_screenshots", "Gemfile", "Gemfile.lock", "LICENSE.txt", "README.md"]
+    permalink: /:year/:month/:day/:title/
 
-Copyright (C) 2019 WowThemes.net.
+* ````exclude```` - Folders that are excluded from `_site_`
+* ````permalink```` - URL structure of blog posts
 
-Theme designed and developed by [Sal](https://www.wowthemes.net), *free* under MIT license. 
+### _posts
+    ---
+    layout: post
+    title: ""
+    date: 
+    categories:
+    description: 
+    image: 
+    image-sm:
+    ---
 
-<a href="https://www.wowthemes.net/donate/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+This is the YAML front matter block for blog posts.
+* ````layout```` - This field will always be post
+* ````title```` - The title of the blog post
+* ````date```` - The date that will appear on the blog post
+* ````categories```` - Optional field that can be entered as an array or a list
+* ````description```` - Optional field for SEO (recommended to not go over 160 characters)
+* ````image```` - The blog theme was designed for 2000x1200px images (optimize your images because this is a picture heavy theme)
+* ````image-sm```` - Optional field for card layouts for image optimization and page speed (designed for 500x300px images)
 
-### Live Demo
+## Upcoming Additions
+* Page transitions
+* More styled elements for blog posts
 
-[Live Demo](https://wowthemesnet.github.io/mundana-theme-jekyll/)
+## Issues
+Please submit any issues [here](https://github.com/thomasvaeth/trophy-jekyll/issues).
+
+## License
+Trophy is licensed under the MIT License.

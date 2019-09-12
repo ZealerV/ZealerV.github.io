@@ -1,65 +1,44 @@
-# Site
-name: 'Mundana'
-description: 'Mundana is a free Jekyll theme for awesome people like you, Medium like.'
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/favicon.ico'
-baseurl: '/mundana-theme-jekyll'
-disqus: 'demowebsite'
-email: 'wowthemesnet@gmail.com'
-mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+# Site/SEO settings
+email: 
+permalink: /:year/:month/:day/:title/
+google_analytics: 
 
-include: ["_pages"]
-permalink: /:title/
+title: Trophy
+description: 
+url: ""
+baseurl: ""
+twitter_username: 
+default_img: 
 
-# Plugins
-plugins: 
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-seo-tag
-  
-authors:
-    sal:
-      name:           Sal
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar1.jpg
-      bio:            "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
-      email:          wowthemesnet@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
+# Profile settings
+name: 
+profile_img: 
+profile: 
+social:
+  github: 
 
-    jane:
-      name:           Jane
-      site:           https://www.wowthemes.net
-      avatar:         /assets/images/avatar2.jpg
-      bio:            "Blogger, fashionista, love to explore new ideas and write on my morning coffee!"
-      email:          fakemail@gmail.com
-      twitter:        https://twitter.com/wowthemesnet
- 
-# Defaults
-defaults:
-
-  # all posts
-  - scope:
-      path: "_posts"
-    values:
-      layout: post
-      author: sal
-      avatar: /assets/images/avatar1.jpg
-      
-  # all pages
-  - scope:
-      path: "_pages"
-    values:
-      layout: page
-      
-# Syntax
+# Build settings
 markdown: kramdown
-highlighter: rouge
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - octopress-autoprefixer
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+exclude:
+  - _screenshots
+  - .DS_Store
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - README.md
 
-# Paginate
-paginate: 10
+# Pagination
+paginate: 5
+paginate_path: "/blog/page-:num"
 
-
-
-# Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+# Sass
+sass:
+  style: compressed

@@ -11,11 +11,11 @@ twitter_username:
 default_img: 
 
 # Profile settings
-name: 
+name: Kat_Z
 profile_img: 
 profile: 
 social:
-  github: 
+  github: https://github.com/ZealerV
 
 # Build settings
 markdown: kramdown
